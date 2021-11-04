@@ -32,9 +32,11 @@ const Routes = () => {
                 <Link to="/characters"> Choisir un héros du mal favori</Link>
             </LinkContainer>
             <br/>
-                <button onClick={() => switchTheme(lightTheme)}> light Theme</button>
-                <button onClick={() => switchTheme(darkTheme)}> dark Theme</button>
-                <button onClick={() => switchTheme(ultimeTheme)}> ultime pouvoir</button>
+             <ButtonContainer>
+                <StyledButton onClick={() => switchTheme(lightTheme)}> light Theme</StyledButton>
+                <StyledButton onClick={() => switchTheme(darkTheme)}> dark Theme</StyledButton>
+                <StyledButton onClick={() => switchTheme(ultimeTheme)}> ultime pouvoir</StyledButton>
+             </ButtonContainer>
                 <Switch>
                     <Route exact path="/">
                         <Login></Login>
@@ -89,5 +91,27 @@ const LinkContainer = styled.div`
    justify-content:space-between;
    padding-left:10%;
    padding-right:10%;
+`
+
+const ButtonContainer = styled.div`
+  width:80%;
+  display:flex;
+  justify-content:space-between;
+  padding-left:10%;
+   padding-right:10%;
+
+`
+
+const StyledButton = styled.div`
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:black;
+  color:white;
+  font-family:Zen Antique;
+  width:100px;
+  height:30px;
+  border-radius:15px;
+  padding:5px;
 `
 
