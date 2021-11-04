@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react"
-import { uuid } from 'uuidv4';
-import PropTypes from 'prop-types';
 import king from '../jaden.png';
 import edge from '../edge.png';
 import devil from '../devil.png';

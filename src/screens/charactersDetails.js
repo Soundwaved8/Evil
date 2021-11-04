@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory, useParams } from 'react-router';
+import { useHistory } from 'react-router';
 import { useLocation } from "react-router-dom";
 
 const CharacterDetails = () => {
-    const [character, setCharacter] = useState({})
+
     const [favorites, setFavorites] = useState(localStorage.getItem('favorites') ? JSON.parse(localStorage.getItem('favorites')) : [] )
     const [isFavorite, setIsfavorite] = useState(false)
-    console.log("🚀 ~ file: characterDetails.js ~ line 8 ~ CharacterDetails ~ favorites", favorites)
     const history = useHistory()
 
     const location = useLocation()

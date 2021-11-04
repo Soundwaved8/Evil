@@ -1,12 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import king from '../jaden.png';
 import edge from '../edge.png';
 import devil from '../devil.png';
 import gaia from '../gaia.png';
 import styled from 'styled-components';
 import bane from '../bane.png';
-import { Link } from 'react-router-dom';
+
 
 const Hero = props => {
     return (

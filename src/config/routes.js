@@ -12,10 +12,10 @@ import Favorites from "../screens/favorites";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, ultimeTheme } from './themes'
 import { useState } from "react";
-import styled from 'styled-components';
 import Hero from "../screens/hero.js";
 import Global from "./global";
 import CharacterDetails from "../screens/charactersDetails";
+import styled from "styled-components";
 
 const Routes = () => {
     const [currentTheme, setCurrentTheme] = useState(lightTheme)
@@ -26,9 +26,11 @@ const Routes = () => {
         <ThemeProvider theme={currentTheme}>
             <Global/>
             <Router>
-            <Link to="/favorites"> Héros favori</Link>
-            <Link to="/heros"> Description des Personnages</Link>
-            <Link to="/characters"> Choisir un héros du mal favori</Link>
+            <LinkContainer>
+                <Link to="/favorites"> Héros favori</Link>
+                <Link to="/heros"> Description des Personnages</Link>
+                <Link to="/characters"> Choisir un héros du mal favori</Link>
+            </LinkContainer>
             <br/>
                 <button onClick={() => switchTheme(lightTheme)}> light Theme</button>
                 <button onClick={() => switchTheme(darkTheme)}> dark Theme</button>
@@ -81,3 +83,11 @@ function PrivateRoute({ children, ...rest }) {
 
 
 export default Routes;
+
+const LinkContainer = styled.div`
+   display:flex;
+   justify-content:space-between;
+   padding-left:10%;
+   padding-right:10%;
+`
+
