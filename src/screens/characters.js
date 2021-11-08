@@ -40,7 +40,7 @@ return(
         <div>
         <Ecriture>
         <p onClick={() => toEvil(characters)}>{characters.name}</p>
-        <Image src={characters.image}>
+        <Image onClick={() => toEvil(characters)}src={characters.image}>
         </Image>
         </Ecriture>
         </div>

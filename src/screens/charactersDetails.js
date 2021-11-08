@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 import { useLocation } from "react-router-dom";
+import styled from 'styled-components';
 
 const CharacterDetails = () => {
 
@@ -40,6 +41,7 @@ const CharacterDetails = () => {
 
 
     return (
+        <Ecriture>
         <div>
             <p onClick={() => history.goBack()}> retour</p>
                 <p>{location.state.character.name}</p>
@@ -50,8 +52,14 @@ const CharacterDetails = () => {
                 <button onClick={() => {handleFavorite(location.state.character)}}>{isFavorite ?"remove from favorite" : "add to favorite"}</button>
 
         </div>
+        </Ecriture>
     );
 };
 
 
 export default CharacterDetails;
+
+const Ecriture = styled.div`
+text-align: center;
+color: white;
+`
